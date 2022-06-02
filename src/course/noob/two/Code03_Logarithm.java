@@ -3,9 +3,9 @@ package course.noob.two;
 public class Code03_Logarithm {
 
 
-    // 返回数组 arr，arr长度 [0,maxLen-1], arr 中的每个值 [0,maxvalue-1]
+    // 返回数组 arr，arr长度 [1,maxLen], arr 中的每个值 [0,maxvalue-1]
     public static int[] lenRandomValueRandom(int maxLen, int maxValue) {
-        int len = (int) (Math.random() * maxLen);
+        int len = (int) (Math.random() * maxLen) + 1;
         int[] intArr = new int[len];
         for (int i = 0; i < len; i++) {
             intArr[i] = (int) (Math.random() * maxValue);
@@ -23,6 +23,13 @@ public class Code03_Logarithm {
         return ans;
     }
 
+    // 遍历打印数组
+    public static void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + ",");
+        }
+        System.out.println();
+    }
 
     // 判断是否升序
     public static boolean isSorted(int[] arr) {
